@@ -63,6 +63,12 @@ export default function StudentBox(props) {
     }
 
     let opacity = isDragging ? 0.4 : 1.0
+    let background = person
+    let backgroundAlpha = 0.70
+    if (student.photo != null && student.photo !== '') {
+        background = student.photo
+        backgroundAlpha = 0.35
+    }
     return (
         <div
             ref={dragRef}
@@ -72,7 +78,7 @@ export default function StudentBox(props) {
                 width: `${deskWidth}px`,
                 height: `${deskHeight}px`,
                 opacity: opacity,
-                backgroundImage: `linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.90)), url(${person})`
+                backgroundImage: `linear-gradient(rgba(255,255,255,${backgroundAlpha}), rgba(255,255,255,${backgroundAlpha})), url(${background})`
             }}
             onClick={handle_click}
         >

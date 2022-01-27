@@ -19,3 +19,8 @@ button.delete-student {
     color: white;
     background-color: #d06090;
 }
+
+img.photo-preview {
+    max-height: 250px;
+    max-width: 250px;
+}

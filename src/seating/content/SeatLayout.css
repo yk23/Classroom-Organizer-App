@@ -52,10 +52,14 @@ div#classroom-main-container {
     border: 1px solid black;
     color: black;
     position: relative;
-    background-position-x: center;
-    background-position-y: center;
+    /*background-position-x: center;*/
+    /*background-position-y: center;*/
     background-size: contain;
     background-repeat: no-repeat;
+    justify-content: space-between;
+
+    /*background-attachment: fixed;*/
+    background-position: right;
 }
 
 .classroom-seat .student-box {

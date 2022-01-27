@@ -1,6 +1,6 @@
 import React from "react";
 import {connect, useDispatch} from 'react-redux';
-import { Field, reduxForm } from 'redux-form'
+import { Field, reduxForm, formValueSelector } from 'redux-form'
 
 import {deleteStudent, studentGetter} from "../../states/Classroom"
 import {getFocusedStudent, focusStudent} from "../../states/FocusedStudent";
@@ -16,9 +16,8 @@ function StudentPhoto(props) {
     } else {
         return <div className={"photo"}>
             <img
+                className={"photo-preview"}
                 src={props.url}
-                height={250 + 'px'}
-                width={250 + 'px'}
                 alt={"Student"}
             />
         </div>
@@ -28,7 +27,10 @@ function StudentPhoto(props) {
 
 function StudentForm(props) {
     // const { handleSubmit, pristine, reset, submitting } = props;
-    const { handleSubmit } = props;
+    const handleSubmit = props.handleSubmit
+    const pristine = props.pristine
+    const submitting = props.submitting
+    const currentPhotoUrl = props.photoUrl
     const studentId = useSelector(getFocusedStudent)
     const student = useSelector(studentGetter(studentId));
 
@@ -58,19 +60,18 @@ function StudentForm(props) {
             </tr>
             <tr>
                 <td colSpan={2}>
-                    <StudentPhoto url={student.photo}/>
+                    <StudentPhoto url={currentPhotoUrl}/>
                 </td>
             </tr>
             <tr>
                 <th>Photo:</th>
                 <td>
                     <Field
-                        type={"url"}
+                        type={"text"}
                         name={"photo"}
                         component={"input"}
                         placeholder={"https://example.com"}
                         value={student['photo']}
-                        pattern={"https://.*"}
                         size={20}
                     />
                 </td>
@@ -87,7 +88,7 @@ function StudentForm(props) {
             </tr>
             <tr>
                 <td align={"left"}>
-                    <button type={"submit"}>Save Student Info</button>
+                    <button type={"submit"} disabled={pristine || submitting}>Save Student Info</button>
                 </td>
                 <td align={"right"}>
                     <button
@@ -105,12 +106,16 @@ function StudentForm(props) {
 }
 
 // eslint-disable-next-line no-func-assign
-StudentForm = connect(
-    state => ({
-        initialValues: state.classroom.present.students[state.focusedStudent.studentId]
-    })
-)(reduxForm({
+StudentForm = reduxForm({
     form: 'focusedStudent',   /* Name of the form */
     enableReinitialize : true
-})(StudentForm))
-export default StudentForm
+})(StudentForm)
+
+// enable form value updating via selectors
+const selector = formValueSelector('focusedStudent') // <-- same as form name
+export default connect(
+    state => ({
+        initialValues: state.classroom.present.students[state.focusedStudent.studentId],
+        photoUrl: selector(state, 'photo')
+    })
+)(StudentForm)
