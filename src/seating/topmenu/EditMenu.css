@@ -1,0 +1,33 @@
+div#editmode-menu {
+    background-color: lightgreen;
+}
+
+#editmode-menu ul {
+    margin: 0;
+    padding-top: .5em;
+    padding-left: 0;
+    padding-bottom: .5em;
+    padding-right: 0;
+}
+
+#editmode-menu li {
+    display: inline;
+    padding-left: .5em;
+}
+
+#editmode-menu button {
+    cursor: pointer;
+    border: .1em solid darkgreen;
+    border-radius: 45px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+button.editmenu-item-active {
+    background-color: darkgreen;
+    color: white;
+}
+
+button.editmenu-item-inactive {
+    background-color: lightgreen;
+    color: black;
+}

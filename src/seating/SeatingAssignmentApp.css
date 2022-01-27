@@ -1,0 +1,4 @@
+div#seating-app-body {
+    display: flex;
+    flex-direction: row;
+}

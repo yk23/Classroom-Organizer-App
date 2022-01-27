@@ -1,0 +1,87 @@
+div#classroom-main-container {
+
+}
+
+.classroom-layout {
+    position: relative;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.gridline {
+    position: absolute;
+    background-color: rgba(200, 200, 200, 0.05);
+    z-index: -1;
+}
+
+.horizontal.gridline {
+    height: 0.005em;
+    width: 100%;
+    left: 0;
+    margin: 0;
+}
+
+.vertical.gridline {
+    height: 100%;
+    width: 0.005em;
+    margin: 0;
+}
+
+.classroom-front {
+    margin: auto;
+    color: white;
+    background-color: rgba(30, 100, 30, 1.0);
+    width: 100%;
+    text-align: center;
+}
+
+.classroom-item {
+    /* desks and student boxes */
+    border-radius: 5px;
+
+    /* Note: this adds extra vertical spacing to the div container.*/
+    overflow: hidden;
+    text-align: left;
+    flex: 0 0 auto;
+}
+
+.student-box {
+    display: flex;
+    align-items: center;
+    background-color: #e6e6e6;
+    border: 1px solid black;
+    color: black;
+    position: relative;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.classroom-seat .student-box {
+    /*Try to center the student-box inside classroom-seat.*/
+    margin-left: -1px;
+    margin-top: -0.5px;
+}
+
+.student-box span {
+    display: inline-block;
+    padding-left: 0.5em;
+}
+
+.classroom-seat {
+    position: absolute;
+    border: 2px solid #6b330c;
+}
+
+.seat-active {
+    border: 2px solid rgb(100, 200, 100);
+}
+
+.seat-open {
+    border: 2px dotted rgb(100, 200, 100);
+}
+
+.seat-taken {
+    border: 2px dotted red;
+}

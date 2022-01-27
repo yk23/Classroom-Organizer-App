@@ -1,0 +1,35 @@
+.classroom-app-unassigned {
+    position: relative;
+    width: 95%;
+    height: 105px;
+    background-color: rgb(126, 169, 215);
+    border: 2px solid rgb(16, 98, 197);
+    border-radius: 25px;
+    padding: 10px 15px 10px 10px;
+    bottom: 0;
+    margin-top: 30px;
+    display: inline-block;
+    text-align: center;
+    /*transform: translate(0px, 30px);*/
+}
+
+.unassigned-section-title {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: black;
+    padding-left: 1em;
+}
+
+.unassigned-section-main {
+    display: flex;
+    overflow-x: auto;
+    padding-top: 1.0em;
+    padding-bottom: 1.0em;
+
+    /* Fade out the sides. */
+    /*mask-image: linear-gradient(to right, black 90%, transparent 100%);*/
+}
+
+.unassigned-section-main .classroom-item {
+    margin-left: 0.5em;
+}

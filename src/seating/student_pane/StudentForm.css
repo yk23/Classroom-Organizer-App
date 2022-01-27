@@ -1,0 +1,21 @@
+div.photo {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+span.missing-photo {
+    border: 1px solid black;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+table#student-form th {
+    text-align: left;
+}
+
+button.delete-student {
+    color: white;
+    background-color: #d06090;
+}

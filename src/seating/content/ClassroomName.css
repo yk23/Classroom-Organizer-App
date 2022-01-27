@@ -1,0 +1,15 @@
+#classroom-title {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 0.5em 0 35px 0;
+}
+
+#classroom-title-input {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    background-color: #e6e6e6;
+}

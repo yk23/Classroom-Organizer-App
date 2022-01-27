@@ -1,0 +1,69 @@
+div#toolbar-main {
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+div.toolbar-item-basic {
+    border: 0.05em solid black;
+    font-weight: bold;
+    width: 5em;
+    height: 5em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ece6a6;
+}
+
+div.toolbar-item-active {
+    background-color: #303090;
+}
+
+div.toolbar-item-inactive {
+    background-color: #b0b0d0;
+}
+
+div.toolbar-icon-container {
+    width: 5em;
+    text-align: center;
+}
+
+div.toolbar-item-popup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    cursor: auto;
+    border: 1px solid black;
+    background-color: #e6e6e6;
+    left: 5.1em;
+    height: 5em;
+    /*transition: transform .3s cubic-bezier(0, .52, 0, 1);*/
+    z-index: 1;
+    width: 30em;
+}
+
+.popup-opened {
+    visibility: visible;
+}
+
+.popup-closed {
+    visibility: hidden;
+}
+
+img.tool-icon {
+    width: 3em;
+}
+
+img#save-tool-icon {
+}
+
+img#load-tool-icon {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+img#redo-tool-icon {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
