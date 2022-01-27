@@ -2,27 +2,30 @@
 
 ## Done:
 - Basic click/drag features.
-- Popup menu.
+- Toolbar for basic functionality.
 - Loading/saving classroom configuration from file.
 - Desk edit mode: Rearrange existing desk, Add new desks.
 - Snap to grid
 - Reversing left/right, front/back orientation for rendering.
 - Undo/Redo.
+- Student metadata editing
 
 ## Todo:
-- Student edit mode. Add/remove/edit metadata [TODO]
-- ability to change box sizing.
+- Better aesthetic design.
 - Printer-Friendly version.
-- Editing/Displaying student metadata.
-- Exporting list of students.
-- Error message panel
+- Readable export of students.
+- Error message panel.
 - Ability to rotate desks *low-priority*
 - Click-based attendance taking tool. *low-priority*
-- Log/history of actions. *low-priority*
-- Upload student photos? (only possible with backend-enabled website)
+
+# Main dependencies:
+- React
+- Redux
+- Redux-form
+- React-dnd
 
 
-# Getting Started with Create React App
+# Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
