@@ -82,7 +82,7 @@ export default function StudentBox(props) {
             }}
             onClick={handle_click}
         >
-            <span>{student.lastName},<br/>{student.firstName}</span>
+            <span>{student.firstName}<br/>{student.lastName}</span>
         </div>
     )
 }

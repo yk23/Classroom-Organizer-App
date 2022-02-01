@@ -47,15 +47,15 @@ function StudentForm(props) {
         <table id={"student-form"}>
             <tbody>
             <tr>
-                <th>Last Name:</th>
-                <td>
-                    <Field type={"text"} name={"lastName"} component={"input"} placeholder={"Last Name"}/>
-                </td>
-            </tr>
-            <tr>
                 <th>First Name:</th>
                 <td>
                     <Field type={"text"} name={"firstName"} component={"input"} placeholder={"First Name"}/>
+                </td>
+            </tr>
+            <tr>
+                <th>Last Name:</th>
+                <td>
+                    <Field type={"text"} name={"lastName"} component={"input"} placeholder={"Last Name"}/>
                 </td>
             </tr>
             <tr>
